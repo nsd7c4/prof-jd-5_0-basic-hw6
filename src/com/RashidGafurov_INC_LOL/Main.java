@@ -27,7 +27,7 @@ public class Main {
         System.out.println("Minimal expenses for a day is " + minExpense +" rubles.");
 
         //Assignment 3
-        float averageExpense = sumExpenses / (januaryExpenses.length-1);
+        float averageExpense = sumExpenses / (januaryExpenses.length);
         System.out.println("Average expenses for a month is " + averageExpense + " rubles.");
 
         //Assignment 4
