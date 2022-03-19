@@ -90,17 +90,27 @@ public class Main {
         }
 
         //Assignment 9
-        int[] array9 = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
-        //int[] array9 = {-1, -2, -3, -4, -5, -6, 4, 2};
+        //int[] array9 = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+        //int[] array9 = {48, -9, -49, -30, 48, -23, 47, -21, 11, -35, -31, 1, 26, 39, -15, 13, 26, -28, -16, -41, 40, -6, 7, 39, 31, 19, 14, -8};
         //Arrays.sort(array9);
+        int[] array9 = generateRandomArray2();
         System.out.println(Arrays.toString(array9));
         for (int i = 0; i < array9.length; i++) {
-            for (int j = array9.length-1; j > i; j--) {
-                if (array9[i] + array9[j] == -2 && array9[i] != array9[j]) {
+            for (int j = i + 1; j < array9.length; j++) {
+                if (array9[i] + array9[j] == -2) {
                     System.out.println("First number is " + array9[i] + ". Second Number is " + array9[j]);
                 }
             }
         }
+    }
+
+    public static int[] generateRandomArray2() {
+        java.util.Random random = new java.util.Random();
+        int[] arr = new int[30];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(100) - 50;
+        }
+        return arr;
     }
 
     public static int[] generateRandomArray() {
