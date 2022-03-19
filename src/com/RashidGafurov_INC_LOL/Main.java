@@ -1,6 +1,7 @@
 package com.RashidGafurov_INC_LOL;
 
 //import java.sql.Array;
+
 import java.util.Arrays;
 
 public class Main {
@@ -90,9 +91,11 @@ public class Main {
 
         //Assignment 9
         int[] array9 = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
-        //int[] array9 = {-1, -2,-3,-4,-5,-6,4,2};
-        for (int i =0; i < array9.length; i++) {
-            for (int j =0; j < array9.length; j++) {
+        //int[] array9 = {-1, -2, -3, -4, -5, -6, 4, 2};
+        //Arrays.sort(array9);
+        System.out.println(Arrays.toString(array9));
+        for (int i = 0; i < array9.length; i++) {
+            for (int j = array9.length-1; j > i; j--) {
                 if (array9[i] + array9[j] == -2 && array9[i] != array9[j]) {
                     System.out.println("First number is " + array9[i] + ". Second Number is " + array9[j]);
                 }
