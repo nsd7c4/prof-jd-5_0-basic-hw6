@@ -1,13 +1,13 @@
 package com.RashidGafurov_INC_LOL;
 
-import java.sql.Array;
+//import java.sql.Array;
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
         //Assignment 1
-        int januaryExpenses[] = generateRandomArray();
+        int[] januaryExpenses = generateRandomArray();
         int sumExpenses = 0;
         for (int i : januaryExpenses) {
             sumExpenses += i;
@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Minimal expenses for a day is " + minExpense + " rubles.");
 
         //Assignment 3
-        float averageExpense = sumExpenses / (januaryExpenses.length);
+        float averageExpense = sumExpenses / januaryExpenses.length;
         System.out.println("Average expenses for a month is " + averageExpense + " rubles.");
 
         //Assignment 4
@@ -64,7 +64,7 @@ public class Main {
         System.out.println(Arrays.toString(invertedArray6));
 
         //Assignment 7
-        int tempV = 0;
+        int tempV;
         for (int i = 0; i < array6.length / 2; i++) {
             tempV = array6[i];
             array6[i] = array6[array6.length - i - 1];
